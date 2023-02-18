@@ -3,7 +3,7 @@ CREATE SCHEMA clothes_shop;
 USE clothes_shop;
 
 -- Table with shops where the purchase was made
-CREATE TABLE shop (
+CREATE TABLE shops (
 	idshop INT NOT NULL UNIQUE,
     city VARCHAR(45) NOT NULL,
     country VARCHAR(45) NOT NULL UNIQUE,
@@ -20,7 +20,7 @@ CREATE TABLE clothes(
 );
 
 -- Table with Vendor data
-CREATE TABLE employee(
+CREATE TABLE employees(
 	idemployee INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(45) NOT NULL,
     last_name VARCHAR(45) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE employee(
 );
 
 -- Table with purchase details
-CREATE TABLE purchase (
+CREATE TABLE purchases (
 	idpurchase INT NOT NULL AUTO_INCREMENT UNIQUE,
     final_value INT NOT NULL,
     clothes_pur VARCHAR(45) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE purchase (
 );
 
 -- Table with customer information
-CREATE TABLE customer(
+CREATE TABLE customers(
 	idcustomer INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(45) NOT NULL,
     last_name VARCHAR(45) NOT NULL,
